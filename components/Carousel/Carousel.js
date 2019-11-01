@@ -29,12 +29,17 @@ function CarouselMaker(){
         thirdImg = document.createElement("img"),
         fourthImg = document.createElement("img"),
         rightButton = document.createElement("div");
+        images = [];
 
   carousel.appendChild(leftButton);
-  carousel.appendChild(firstImg);
-  carousel.appendChild(secondImg);
-  carousel.appendChild(thirdImg);
-  carousel.appendChild(fourthImg);
+  images.push(firstImg, secondImg, thirdImg, fourthImg);
+  images.forEach(item => {
+    carousel.appendChild(item);
+  });
+  // carousel.appendChild(firstImg);
+  // carousel.appendChild(secondImg);
+  // carousel.appendChild(thirdImg);
+  // carousel.appendChild(fourthImg);
   carousel.appendChild(rightButton);
 
   carousel.classList.add("carousel");
@@ -49,6 +54,14 @@ function CarouselMaker(){
   fourthImg.src = "./assets/carousel/turntable.jpeg";
 
   firstImg.style.display = "block";
+
+  // rightButton.addEventListener("click", () => {
+  //   for (i = 0; i < images.length; i++){
+  //     images[i].style.display = "none";
+  //     images[i+1].style.display = "block";
+  //     TweenMax.fromTo(images[i+1], 1, {opacity:0}, {opacity:1});
+  //   }
+  // });
 
   rightButton.addEventListener("click", () => {
     if (firstImg.style.display === "block") {
