@@ -36,10 +36,6 @@ function CarouselMaker(){
   images.forEach(item => {
     carousel.appendChild(item);
   });
-  // carousel.appendChild(firstImg);
-  // carousel.appendChild(secondImg);
-  // carousel.appendChild(thirdImg);
-  // carousel.appendChild(fourthImg);
   carousel.appendChild(rightButton);
 
   carousel.classList.add("carousel");
@@ -58,8 +54,8 @@ function CarouselMaker(){
   // rightButton.addEventListener("click", () => {
   //   for (i = 0; i < images.length; i++){
   //     images[i].style.display = "none";
-  //     images[i+1].style.display = "block";
-  //     TweenMax.fromTo(images[i+1], 1, {opacity:0}, {opacity:1});
+  //     images[i++].style.display = "block";
+  //     TweenMax.fromTo(images[i++], 1, {opacity:0}, {opacity:1});
   //   }
   // });
 
