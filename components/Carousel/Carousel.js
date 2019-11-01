@@ -54,15 +54,19 @@ function CarouselMaker(){
     if (firstImg.style.display === "block") {
       firstImg.style.display = "none";
       secondImg.style.display = "block";
+      TweenMax.fromTo(secondImg, 1, {opacity:0}, {opacity:1});      
     } else if (secondImg.style.display === "block") {
       secondImg.style.display = "none";
       thirdImg.style.display = "block";
+      TweenMax.fromTo(thirdImg, 1, {opacity:0}, {opacity:1});  
     } else if (thirdImg.style.display === "block") {
       thirdImg.style.display = "none";
       fourthImg.style.display = "block";
+      TweenMax.fromTo(fourthImg, 1, {opacity:0}, {opacity:1});  
     } else {
       fourthImg.style.display = "none";
       firstImg.style.display = "block";
+      TweenMax.fromTo(firstImg, 1, {opacity:0}, {opacity:1});  
     };
   });
 
@@ -70,15 +74,19 @@ function CarouselMaker(){
     if (fourthImg.style.display === "block") {
       fourthImg.style.display = "none";
       thirdImg.style.display = "block";
+      TweenMax.fromTo(thirdImg, 1, {opacity:0}, {opacity:1});  
     } else if (thirdImg.style.display === "block") {
       thirdImg.style.display = "none";
       secondImg.style.display = "block";
+      TweenMax.fromTo(secondImg, 1, {opacity:0}, {opacity:1});  
     } else if (secondImg.style.display === "block") {
       secondImg.style.display = "none";
       firstImg.style.display = "block";
+      TweenMax.fromTo(firstImg, 1, {opacity:0}, {opacity:1});  
     } else {
       firstImg.style.display = "none";
       fourthImg.style.display = "block";
+      TweenMax.fromTo(fourthImg, 1, {opacity:0}, {opacity:1});  
     };
   });
 
